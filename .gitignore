@@ -1,7 +1,4 @@
 node_modules
 db/app.db
 build
-npm-debug.log
-.nyc
 .env
-.DS_Store
