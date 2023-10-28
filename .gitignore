@@ -1,5 +1,5 @@
 node_modules
-tmp/app.db
+db/app.db
 build
 npm-debug.log
 .nyc
