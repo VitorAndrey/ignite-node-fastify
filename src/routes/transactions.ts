@@ -48,19 +48,19 @@ export async function transactionsRoutes(app: FastifyInstance) {
   );
 
   app.get(
-    "/sumary",
+    "/summary",
     {
       preHandler: [checkSessionIdExists],
     },
     async (request, reply) => {
       const { sessionId } = request.cookies;
 
-      const sumary = await knex("transactions")
+      const summary = await knex("transactions")
         .where("session_id", sessionId)
         .sum("amount", { as: "amount" })
         .first();
 
-      return reply.status(200).send({ sumary });
+      return reply.status(200).send({ summary });
     }
   );
 
